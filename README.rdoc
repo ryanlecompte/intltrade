@@ -2,13 +2,14 @@
 
 International trade is an RMU puzzle node problem (http://puzzlenode.com/).
 This is a gem that solves the sample data set included for the problem.
+It may not solve the full data set on puzzlenode.com due to a lack of Banker's Rounding in my solution.
 
 To run the program against the sample data, simply execute the 'bin/run' script.
 
 To run the tests, simply run 'rspec spec'.
 
 == Contributing to intltrade
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
 * Fork the project
