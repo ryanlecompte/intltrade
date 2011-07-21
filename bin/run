@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+# International Trade, RMU Puzzle
+# Author: Ryan LeCompte
+
+# Parse the sample input/output files and produce result.
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'intltrade'
+
+# Parse the sample rates and transactions files.
+rates_input = File.join(File.dirname(__FILE__), 'SAMPLE_RATES.xml')
+transactions_input = File.join(File.dirname(__FILE__), 'SAMPLE_TRANS.csv')
+transactions = InternationalTrade::Parser.parse_transactions(File.read(transactions_input),
+                                                             File.read(rates_input))
+
+# Get the sum of all transactions in USD for SKU DM1182.
+result = transactions.select {|t| t.sku == 'DM1182'}.inject(BigDecimal('0.0')) { |sum, t| sum + t.to_usd }
+puts result.to_s('F')
+
+
+
