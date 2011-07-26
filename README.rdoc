@@ -20,6 +20,6 @@ To run the tests, simply run 'rspec spec'.
 
 == Copyright
 
-Copyright (c) 2011 Ryan LeCompte. See LICENSE.txt for
+Copyright (c) 2011 Ryan LeCompte. See LICENSE for
 further details.
 
